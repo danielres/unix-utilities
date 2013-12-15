@@ -15,7 +15,7 @@ def enable_trackpad
 end
 
 def trackpad_enabled?
-  `xinput list-props 14 | grep Enabled`.strip[-1].to_i == 1
+  `xinput list-props #{TRACKPAD_ID} | grep Enabled`.strip[-1].to_i == 1
 end
 
 def trackpad_status
